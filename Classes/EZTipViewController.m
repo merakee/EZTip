@@ -8,39 +8,42 @@
 
 #import "EZTipViewController.h"
 
+@interface EZTipViewController () {
+    UIButton *keyPadButtons[kNumberOfKeyPadButtons];
+    UIButton *tipPercentAdjustButtons[kTipPercentAdjustButtons];
+    UIButton *numberOfPeopleAdjustButtons[kNumberOfPeopleAdjustButtons];
+    UISegmentedControl *tipMethodControlSwitch;
+
+    UIImageView *ezTipBackGroundImageView;
+
+    // app state variables
+    int appState;
+    float billAmount;
+    int tipPercent;
+    int numberOfPeople;
+    int tipMethodIndex;
+    NSNumber *tempNSNumberVC;
+    NSString *AppStateFilePath;
+    NSMutableString *billAmountMS;
+    NSString *currencySymbol;
+
+    // temp variable
+    int numberOfDigits;
+    int numberOfFracDigits;
+    NSString *tempString;
+    CGRect tempRect;
+}
+
+@end
+
 @implementation EZTipViewController
-
-@synthesize ezTipQuartzView;
-
-// local variables
-// app delegate
-id mainAppDelegate;
-
-// app state variables
-int appState;
-float billAmount;
-int tipPercent;
-int numberOfPeople;
-int tipMethodIndex;
-NSNumber *tempNSNumberVC;
-NSString *AppStateFilePath;
-NSMutableString *billAmountMS;
-NSString *currencySymbol;
-
-// temp variable
-int numberOfDigits;
-int numberOfFracDigits;
-NSString *tempString;
-CGRect tempRect;
 
 #pragma mark Core View Controller Methods
 // init method
-- (id)initWithAppDelegate:(id)appDelegate {
+- (instancetype)init {
     if (self = [super init]) {
         // intialize variable
         billAmountMS = [[NSMutableString alloc] initWithString:@""];
-        // set app Delegate
-        mainAppDelegate = appDelegate;
     }
     return self;
 }
@@ -50,21 +53,19 @@ CGRect tempRect;
     [super loadView];
 
     // window size
-    CGRect bounds = [[UIScreen mainScreen] bounds];
+    CGRect bounds = [UIScreen mainScreen].bounds;
     ezTipBackGroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:kEZTipViewBackGroundImage]];
-    ezTipQuartzView = [[EZTipQuartzView alloc] initWithFrame:bounds];
-    ezTipQuartzView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.0];
+    self.ezTipQuartzView = [[EZTipQuartzView alloc] initWithFrame:bounds];
+    self.ezTipQuartzView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.0];
 
     // set all buttons
     [self setAllButtons];
 
     // attach backgorund image
     [self.view addSubview:ezTipBackGroundImageView];
-    [ezTipBackGroundImageView release];
 
     // attach the Main Quartz view
-    [self.view addSubview:ezTipQuartzView];
-    [ezTipQuartzView release];
+    [self.view addSubview:self.ezTipQuartzView];
 
     // attach the button views
     [self attachAllButtons];
@@ -84,12 +85,11 @@ CGRect tempRect;
     tempString =
         [[NSString alloc] initWithFormat:@"%@", [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol]];
     if ([tempString isEqualToString:@""]) {
-        currencySymbol = [[NSString alloc] initWithString:@"$"];
+        currencySymbol = @"$";
     } else {
         currencySymbol = [[NSString alloc] initWithString:tempString];
     }
     // NSLog(@"%@    TS: %@",currencySymbol,tempString);
-    [tempString release];
 
     // set tio method swich
     tipMethodControlSwitch.selectedSegmentIndex = tipMethodIndex;
@@ -119,32 +119,6 @@ CGRect tempRect;
     // Release any retained subviews of the main view.
 }
 
-- (void)dealloc {
-    // buttons
-    for (int ind = 0; ind < kNumberOfKeyPadButtons; ind++) {
-        [keyPadButtons[ind] release];
-    }
-
-    for (int ind = 0; ind < kTipPercentAdjustButtons; ind++) {
-        [tipPercentAdjustButtons[ind] release];
-    }
-
-    for (int ind = 0; ind < kNumberOfPeopleAdjustButtons; ind++) {
-        [numberOfPeopleAdjustButtons[ind] release];
-    }
-    [tipMethodControlSwitch release];
-
-    // views
-    [ezTipBackGroundImageView release];
-    [ezTipQuartzView release];
-
-    // variables
-    [billAmountMS release];
-    [currencySymbol release];
-
-    [super dealloc];
-}
-
 #pragma mark Local Methods
 - (void)setAllButtons {
     int buttonIndex = 0;
@@ -154,10 +128,8 @@ CGRect tempRect;
         keyPadButtons[ind].tag = buttonIndex + 1;
         tempString = [[NSString alloc] initWithFormat:@"KeyPadButton%dNormal.png", ind + 1];
         [keyPadButtons[ind] setImage:[UIImage imageNamed:tempString] forState:UIControlStateNormal];
-        [tempString release];
         tempString = [[NSString alloc] initWithFormat:@"KeyPadButton%dHighlighted.png", ind + 1];
         [keyPadButtons[ind] setImage:[UIImage imageNamed:tempString] forState:UIControlStateHighlighted];
-        [tempString release];
         // keyPadButtons[ind].backgroundColor = [UIColor colorWithWhite:kButtonColor alpha:kButtonOpacity];
         tempRect = CGRectMake(kButtonCoordinate[buttonIndex][0], kButtonCoordinate[buttonIndex][1],
                               kButtonCoordinate[buttonIndex][2], kButtonCoordinate[buttonIndex][3]);
@@ -375,36 +347,30 @@ CGRect tempRect;
     //==============================================
 
     // set parameters
-    ezTipQuartzView.billAmountTextQV = billAmountMS;
+    self.ezTipQuartzView.billAmountTextQV = billAmountMS;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithInt:tipPercent];
-    ezTipQuartzView.tipPercentQV = tempNSNumberVC;
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(tipPercent);
+    self.ezTipQuartzView.tipPercentQV = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithFloat:tipEach];
-    ezTipQuartzView.tipAmountQV = tempNSNumberVC;
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(tipEach);
+    self.ezTipQuartzView.tipAmountQV = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithInt:numberOfPeople];
-    ezTipQuartzView.numberOfPeopleQV = tempNSNumberVC;
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(numberOfPeople);
+    self.ezTipQuartzView.numberOfPeopleQV = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithFloat:totalEachAmount];
-    ezTipQuartzView.totalAmountQV = tempNSNumberVC;
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(totalEachAmount);
+    self.ezTipQuartzView.totalAmountQV = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithFloat:totalBillAmout];
-    ezTipQuartzView.totalBillAmountQV = tempNSNumberVC;
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(totalBillAmout);
+    self.ezTipQuartzView.totalBillAmountQV = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithFloat:totalTip];
-    ezTipQuartzView.totalTipAmountQV = tempNSNumberVC;
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(totalTip);
+    self.ezTipQuartzView.totalTipAmountQV = tempNSNumberVC;
 
-    ezTipQuartzView.currencySymbolQV = currencySymbol;
+    self.ezTipQuartzView.currencySymbolQV = currencySymbol;
 
     // set display
-    [ezTipQuartzView setNeedsDisplay];
+    [self.ezTipQuartzView setNeedsDisplay];
 }
 - (void)setParametersForDigits {
     float tempBillAmount;
@@ -439,9 +405,8 @@ CGRect tempRect;
 
     // set string
     if ((numberOfDigits > 0) || (numberOfFracDigits > 0)) {
-        tempNSNumberVC = [[NSNumber alloc] initWithFloat:billAmount];
-        [billAmountMS setString:[tempNSNumberVC stringValue]];
-        [tempNSNumberVC release];
+        tempNSNumberVC = @(billAmount);
+        [billAmountMS setString:tempNSNumberVC.stringValue];
 
         if (numberOfDigits == 0) {
             numberOfDigits = 1;
@@ -472,15 +437,13 @@ CGRect tempRect;
     if (buttonIndex <= 10) {
         if ((numberOfFracDigits == 1) || (numberOfFracDigits == 0)) { // check if fractional
             numberOfFracDigits++;
-            tempNSNumberVC = [[NSNumber alloc] initWithInt:buttonValue];
-            [billAmountMS appendString:[tempNSNumberVC stringValue]];
-            [tempNSNumberVC release];
+            tempNSNumberVC = @(buttonValue);
+            [billAmountMS appendString:tempNSNumberVC.stringValue];
         } else if (numberOfFracDigits < 0) { // integer part
             if (numberOfDigits < kMaxDigitsForBillAmount) {
                 numberOfDigits++;
-                tempNSNumberVC = [[NSNumber alloc] initWithInt:buttonValue];
-                [billAmountMS appendString:[tempNSNumberVC stringValue]];
-                [tempNSNumberVC release];
+                tempNSNumberVC = @(buttonValue);
+                [billAmountMS appendString:tempNSNumberVC.stringValue];
             }
         }
     } else if (buttonIndex == 11) {
@@ -491,19 +454,19 @@ CGRect tempRect;
     } else if (buttonIndex == 12) {
         if ((numberOfFracDigits <= 2) && (numberOfFracDigits >= 0)) { // check if fractional
             numberOfFracDigits--;
-            lastIndex = NSMakeRange([billAmountMS length] - 1, 1);
+            lastIndex = NSMakeRange(billAmountMS.length - 1, 1);
             [billAmountMS deleteCharactersInRange:lastIndex];
         } else if (numberOfFracDigits < 0) { // integer part
             if (numberOfDigits > 0) {
                 numberOfDigits--;
-                lastIndex = NSMakeRange([billAmountMS length] - 1, 1);
+                lastIndex = NSMakeRange(billAmountMS.length - 1, 1);
                 [billAmountMS deleteCharactersInRange:lastIndex];
             }
         }
     }
 
     // calculate bill amount
-    billAmount = [billAmountMS floatValue];
+    billAmount = billAmountMS.floatValue;
     preRoundedValue = (int)round(billAmount * 100.0);
     // NSLog(@"%@ - %f - RV %d",billAmountMS,billAmount,preRoundedValue);
 
@@ -561,13 +524,12 @@ CGRect tempRect;
 
     if ([[NSFileManager defaultManager] fileExistsAtPath:AppStateFilePath]) {
         NSDictionary *appStateDictionary = [[NSDictionary alloc] initWithContentsOfFile:AppStateFilePath];
-        appState = [[appStateDictionary objectForKey:kKeyForAppState] intValue];
-        billAmount = [[appStateDictionary objectForKey:kKeyForBillAmount] floatValue];
+        appState = [appStateDictionary[kKeyForAppState] intValue];
+        billAmount = [appStateDictionary[kKeyForBillAmount] floatValue];
         // NSLog(@"GBA:......%.3f",billAmount);
-        tipPercent = [[appStateDictionary objectForKey:kKeyForTipPercent] intValue];
-        numberOfPeople = [[appStateDictionary objectForKey:kKeyForNumberOfPeople] intValue];
-        tipMethodIndex = [[appStateDictionary objectForKey:kKeyForTipMethodIndex] intValue];
-        [appStateDictionary release];
+        tipPercent = [appStateDictionary[kKeyForTipPercent] intValue];
+        numberOfPeople = [appStateDictionary[kKeyForNumberOfPeople] intValue];
+        tipMethodIndex = [appStateDictionary[kKeyForTipMethodIndex] intValue];
     } else // start with default state
     {
         appState = 0;
@@ -594,34 +556,27 @@ CGRect tempRect;
     // set directory data
     AppStateFilePath = [self appStateFilePath];
     NSMutableDictionary *AppStateDictionaryMu = [[NSMutableDictionary alloc] init];
-    tempNSNumberVC = [[NSNumber alloc] initWithFloat:billAmount];
+    tempNSNumberVC = @(billAmount);
     // NSLog(@"BA:......%.3f",billAmount);
-    [AppStateDictionaryMu setObject:tempNSNumberVC forKey:kKeyForBillAmount];
-    [tempNSNumberVC release];
+    AppStateDictionaryMu[kKeyForBillAmount] = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithInt:tipPercent];
-    [AppStateDictionaryMu setObject:tempNSNumberVC forKey:kKeyForTipPercent];
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(tipPercent);
+    AppStateDictionaryMu[kKeyForTipPercent] = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithInt:numberOfPeople];
-    [AppStateDictionaryMu setObject:tempNSNumberVC forKey:kKeyForNumberOfPeople];
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(numberOfPeople);
+    AppStateDictionaryMu[kKeyForNumberOfPeople] = tempNSNumberVC;
 
-    tempNSNumberVC = [[NSNumber alloc] initWithInt:tipMethodIndex];
-    [AppStateDictionaryMu setObject:tempNSNumberVC forKey:kKeyForTipMethodIndex];
-    [tempNSNumberVC release];
+    tempNSNumberVC = @(tipMethodIndex);
+    AppStateDictionaryMu[kKeyForTipMethodIndex] = tempNSNumberVC;
 
     // write file
     [AppStateDictionaryMu writeToFile:AppStateFilePath atomically:YES];
-
-    // release all objects
-    [AppStateDictionaryMu release];
 }
 
 // Implement App State FilePath
 - (NSString *)appStateFilePath {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     return [documentsDirectory stringByAppendingPathComponent:kAppStateFileName];
 }
 

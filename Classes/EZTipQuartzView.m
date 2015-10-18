@@ -42,32 +42,19 @@ NSString *tempText;
 UIFont *tempFont;
 CGRect tempRect;
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // Initialization code
-        billAmountTextQV = [[NSString alloc] initWithString:@"0.0"];
-        tipPercentQV = [[NSNumber alloc] initWithInt:kDefaultTipPercent];
-        tipAmountQV = [[NSNumber alloc] initWithFloat:0.0];
-        numberOfPeopleQV = [[NSNumber alloc] initWithInt:kDefaultNumberOfPeople];
-        totalAmountQV = [[NSNumber alloc] initWithFloat:0.0];
-        totalBillAmountQV = [[NSNumber alloc] initWithFloat:0.0];
-        totalTipAmountQV = [[NSNumber alloc] initWithFloat:0.0];
-        currencySymbolQV = [[NSString alloc] initWithString:@"$"];
+        billAmountTextQV = @"0.0";
+        tipPercentQV = @kDefaultTipPercent;
+        tipAmountQV = @0.0f;
+        numberOfPeopleQV = @kDefaultNumberOfPeople;
+        totalAmountQV = @0.0f;
+        totalBillAmountQV = @0.0f;
+        totalTipAmountQV = @0.0f;
+        currencySymbolQV = @"$";
     }
     return self;
-}
-
-- (void)dealloc {
-    [billAmountTextQV release];
-    [tipPercentQV release];
-    [tipAmountQV release];
-    [numberOfPeopleQV release];
-    [totalAmountQV release];
-    [totalBillAmountQV release];
-    [totalTipAmountQV release];
-    [currencySymbolQV release];
-
-    [super dealloc];
 }
 
 #pragma mark Drawing methods
@@ -77,7 +64,7 @@ CGRect tempRect;
     lineWidth = 2.0;
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
-    cSymbolLength = (int)[currencySymbolQV length];
+    cSymbolLength = (int)currencySymbolQV.length;
     cSymbolLength = (cSymbolLength > 5) ? 5 : cSymbolLength;
 
     // draw bill amount
@@ -114,8 +101,6 @@ CGRect tempRect;
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
 
-    [tempText release];
-
     tempFont = [UIFont fontWithName:@"Georgia" size:kCurrencySymbolFontSizeMain[cSymbolLength - 1]];
     tempRect =
         CGRectMake(kDisplayCoordinate[0][0] - 18.0, kDisplayCoordinate[0][1] + 5.0, kDisplayCoordinate[0][2], 10.0);
@@ -145,7 +130,7 @@ CGRect tempRect;
     // tag
     tempFont = [UIFont fontWithName:@"Helvetica" size:16.0];
     tempRect = CGRectMake(kDisplayCoordinate[1][0], kDisplayCoordinate[1][1] - 10.0, kDisplayCoordinate[1][2], 10.0);
-    if ([numberOfPeopleQV intValue] == 1) {
+    if (numberOfPeopleQV.intValue == 1) {
         tempText = [[NSString alloc] initWithFormat:@"Total Tip"];
     } else {
         tempText = [[NSString alloc] initWithFormat:@"Each Tip"];
@@ -157,7 +142,6 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempFont = [UIFont fontWithName:@"Georgia" size:kCurrencySymbolFontSize[cSymbolLength - 1]];
     tempRect =
@@ -173,7 +157,7 @@ CGRect tempRect;
     tempRect = CGRectMake(kDisplayCoordinate[1][0], kDisplayCoordinate[1][1] + 5.0, kDisplayCoordinate[1][2],
                           kDisplayCoordinate[1][3]);
 
-    tempText = [[NSString alloc] initWithFormat:@"%.2f", [tipAmountQV floatValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%.2f", tipAmountQV.floatValue];
     aDict = @{
         NSFontAttributeName : tempFont,
         NSParagraphStyleAttributeName : [AppUIManager getParagrahStyleWithLineBreakMode:NSLineBreakByTruncatingTail
@@ -196,7 +180,6 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentCenter]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempFont = [UIFont fontWithName:@"Georgia" size:28.0];
     tempRect =
@@ -208,13 +191,12 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempFont = [UIFont fontWithName:@"Helvetica" size:32.0];
     tempRect = CGRectMake(kDisplayCoordinate[2][0], kDisplayCoordinate[2][1] + 5.0, kDisplayCoordinate[2][2],
                           kDisplayCoordinate[2][3]);
 
-    tempText = [[NSString alloc] initWithFormat:@"%d", [tipPercentQV intValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%d", tipPercentQV.intValue];
 
     aDict = @{
         NSFontAttributeName : tempFont,
@@ -222,7 +204,6 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentRight]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 }
 
 // draw Total Amount
@@ -232,7 +213,7 @@ CGRect tempRect;
     // tag
     tempFont = [UIFont fontWithName:@"Helvetica" size:16.0];
     tempRect = CGRectMake(kDisplayCoordinate[3][0], kDisplayCoordinate[3][1] - 10.0, kDisplayCoordinate[3][2], 10.0);
-    if ([numberOfPeopleQV intValue] == 1) {
+    if (numberOfPeopleQV.intValue == 1) {
         tempText = [[NSString alloc] initWithFormat:@"Total Bill"];
     } else {
         tempText = [[NSString alloc] initWithFormat:@"Each Total"];
@@ -243,7 +224,6 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempFont = [UIFont fontWithName:@"Georgia" size:kCurrencySymbolFontSize[cSymbolLength - 1]];
     tempRect =
@@ -259,14 +239,13 @@ CGRect tempRect;
     tempRect = CGRectMake(kDisplayCoordinate[3][0], kDisplayCoordinate[3][1] + 5.0, kDisplayCoordinate[3][2],
                           kDisplayCoordinate[3][3]);
 
-    tempText = [[NSString alloc] initWithFormat:@"%.2f", [totalAmountQV floatValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%.2f", totalAmountQV.floatValue];
     aDict = @{
         NSFontAttributeName : tempFont,
         NSParagraphStyleAttributeName : [AppUIManager getParagrahStyleWithLineBreakMode:NSLineBreakByTruncatingTail
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 }
 
 // draw Number of People
@@ -283,20 +262,18 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentCenter]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempFont = [UIFont fontWithName:@"Helvetica" size:32.0];
     tempRect = CGRectMake(kDisplayCoordinate[4][0], kDisplayCoordinate[4][1] + 5.0, kDisplayCoordinate[4][2],
                           kDisplayCoordinate[4][3]);
 
-    tempText = [[NSString alloc] initWithFormat:@"%d", [numberOfPeopleQV intValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%d", numberOfPeopleQV.intValue];
     aDict = @{
         NSFontAttributeName : tempFont,
         NSParagraphStyleAttributeName : [AppUIManager getParagrahStyleWithLineBreakMode:NSLineBreakByTruncatingTail
                                                                        andTextAlignment:NSTextAlignmentCenter]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 }
 
 // draw Bill Total Amount
@@ -313,7 +290,6 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempText = [[NSString alloc] initWithFormat:@"Total Tip"];
     aDict = @{
@@ -322,7 +298,6 @@ CGRect tempRect;
                                                                        andTextAlignment:NSTextAlignmentRight]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     tempFont = [UIFont fontWithName:@"Georgia" size:kCurrencySymbolFontSize[cSymbolLength - 1]];
     tempRect =
@@ -338,33 +313,30 @@ CGRect tempRect;
     tempRect = CGRectMake(kDisplayCoordinate[5][0], kDisplayCoordinate[5][1] + 5.0, kDisplayCoordinate[5][2],
                           kDisplayCoordinate[5][3]);
 
-    tempText = [[NSString alloc] initWithFormat:@"%.2f", [totalBillAmountQV floatValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%.2f", totalBillAmountQV.floatValue];
     aDict = @{
         NSFontAttributeName : tempFont,
         NSParagraphStyleAttributeName : [AppUIManager getParagrahStyleWithLineBreakMode:NSLineBreakByTruncatingTail
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
-    tempText = [[NSString alloc] initWithFormat:@"%.2f", [totalTipAmountQV floatValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%.2f", totalTipAmountQV.floatValue];
     aDict = @{
         NSFontAttributeName : tempFont,
         NSParagraphStyleAttributeName : [AppUIManager getParagrahStyleWithLineBreakMode:NSLineBreakByTruncatingTail
                                                                        andTextAlignment:NSTextAlignmentRight]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
 
     CGContextSetTextDrawingMode(context, kCGTextInvisible);
-    tempText = [[NSString alloc] initWithFormat:@"%.2f", [totalTipAmountQV floatValue]];
+    tempText = [[NSString alloc] initWithFormat:@"%.2f", totalTipAmountQV.floatValue];
     aDict = @{
         NSFontAttributeName : tempFont,
         NSParagraphStyleAttributeName : [AppUIManager getParagrahStyleWithLineBreakMode:NSLineBreakByTruncatingTail
                                                                        andTextAlignment:NSTextAlignmentLeft]
     };
     [tempText drawInRect:tempRect withAttributes:aDict];
-    [tempText release];
     textPosition = CGContextGetTextPosition(context);
     textWidth = textPosition.x - kDisplayCoordinate[5][0];
 

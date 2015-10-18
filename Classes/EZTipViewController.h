@@ -10,20 +10,11 @@
 #import "EZTipQuartzView.h"
 #import "AppConstants.h"
 
-@interface EZTipViewController : UIViewController {
-	UIButton                  *keyPadButtons[kNumberOfKeyPadButtons];	
-	UIButton                  *tipPercentAdjustButtons[kTipPercentAdjustButtons];
-	UIButton                  *numberOfPeopleAdjustButtons[kNumberOfPeopleAdjustButtons];
-	UISegmentedControl        *tipMethodControlSwitch;
-	
-	UIImageView        *ezTipBackGroundImageView;
-	EZTipQuartzView    *ezTipQuartzView;
-}
+@interface EZTipViewController : UIViewController
 
-@property(nonatomic, retain) EZTipQuartzView *ezTipQuartzView;
+@property(strong, nonatomic) EZTipQuartzView *ezTipQuartzView;
 
 #pragma mark init methods
-- (id)initWithAppDelegate:(id)appDelegate;
 
 #pragma mark Local Methods
 - (void)setAllButtons;
@@ -43,5 +34,5 @@
 #pragma mark Persistance Methods
 - (void)getAppState;
 - (void)saveAppState;
-- (NSString *)appStateFilePath;
+@property(NS_NONATOMIC_IOSONLY, readonly, copy) NSString *appStateFilePath;
 @end
