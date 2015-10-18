@@ -46,9 +46,9 @@ CGRect tempRect;
     if (self = [super initWithFrame:frame]) {
         // Initialization code
         billAmountTextQV = @"0.0";
-        tipPercentQV = @kDefaultTipPercent;
+        tipPercentQV = [NSNumber numberWithFloat:kDefaultTipPercent];
         tipAmountQV = @0.0f;
-        numberOfPeopleQV = @kDefaultNumberOfPeople;
+        numberOfPeopleQV = [NSNumber numberWithInt:kDefaultNumberOfPeople];
         totalAmountQV = @0.0f;
         totalBillAmountQV = @0.0f;
         totalTipAmountQV = @0.0f;

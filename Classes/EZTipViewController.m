@@ -8,6 +8,8 @@
 
 #import "EZTipViewController.h"
 
+
+
 @interface EZTipViewController () {
     UIButton *keyPadButtons[kNumberOfKeyPadButtons];
     UIButton *tipPercentAdjustButtons[kTipPercentAdjustButtons];
@@ -578,6 +580,10 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = paths[0];
     return [documentsDirectory stringByAppendingPathComponent:kAppStateFileName];
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 @end
