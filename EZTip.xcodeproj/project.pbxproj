@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11B3C67010486E3A00BE7B88 /* KeyPadButton10Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65810486E3A00BE7B88 /* KeyPadButton10Highlighted.png */; };
+		11B3C67110486E3A00BE7B88 /* KeyPadButton12Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65910486E3A00BE7B88 /* KeyPadButton12Highlighted.png */; };
+		11B3C67210486E3A00BE7B88 /* KeyPadButton11Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65A10486E3A00BE7B88 /* KeyPadButton11Highlighted.png */; };
+		11B3C67310486E3A00BE7B88 /* KeyPadButton6Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65B10486E3A00BE7B88 /* KeyPadButton6Highlighted.png */; };
+		11B3C67410486E3A00BE7B88 /* KeyPadButton4Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65C10486E3A00BE7B88 /* KeyPadButton4Highlighted.png */; };
+		11B3C67510486E3A00BE7B88 /* KeyPadButton3Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65D10486E3A00BE7B88 /* KeyPadButton3Highlighted.png */; };
+		11B3C67610486E3A00BE7B88 /* KeyPadButton4Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65E10486E3A00BE7B88 /* KeyPadButton4Normal.png */; };
+		11B3C67710486E3A00BE7B88 /* KeyPadButton1Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C65F10486E3A00BE7B88 /* KeyPadButton1Highlighted.png */; };
+		11B3C67810486E3A00BE7B88 /* KeyPadButton8Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66010486E3A00BE7B88 /* KeyPadButton8Highlighted.png */; };
+		11B3C67910486E3A00BE7B88 /* KeyPadButton5Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66110486E3A00BE7B88 /* KeyPadButton5Highlighted.png */; };
+		11B3C67A10486E3A00BE7B88 /* KeyPadButton2Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66210486E3A00BE7B88 /* KeyPadButton2Highlighted.png */; };
+		11B3C67B10486E3A00BE7B88 /* KeyPadButton7Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66310486E3A00BE7B88 /* KeyPadButton7Highlighted.png */; };
+		11B3C67C10486E3A00BE7B88 /* KeyPadButton6Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66410486E3A00BE7B88 /* KeyPadButton6Normal.png */; };
+		11B3C67D10486E3A00BE7B88 /* KeyPadButton7Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66510486E3A00BE7B88 /* KeyPadButton7Normal.png */; };
+		11B3C67E10486E3A00BE7B88 /* KeyPadButton3Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66610486E3A00BE7B88 /* KeyPadButton3Normal.png */; };
+		11B3C67F10486E3A00BE7B88 /* KeyPadButton5Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66710486E3A00BE7B88 /* KeyPadButton5Normal.png */; };
+		11B3C68010486E3A00BE7B88 /* KeyPadButton12Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66810486E3A00BE7B88 /* KeyPadButton12Normal.png */; };
+		11B3C68110486E3A00BE7B88 /* KeyPadButton1Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66910486E3A00BE7B88 /* KeyPadButton1Normal.png */; };
+		11B3C68210486E3A00BE7B88 /* KeyPadButton9Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66A10486E3A00BE7B88 /* KeyPadButton9Normal.png */; };
+		11B3C68310486E3A00BE7B88 /* KeyPadButton10Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66B10486E3A00BE7B88 /* KeyPadButton10Normal.png */; };
+		11B3C68410486E3A00BE7B88 /* KeyPadButton2Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66C10486E3A00BE7B88 /* KeyPadButton2Normal.png */; };
+		11B3C68510486E3A00BE7B88 /* KeyPadButton8Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66D10486E3A00BE7B88 /* KeyPadButton8Normal.png */; };
+		11B3C68610486E3A00BE7B88 /* KeyPadButton9Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66E10486E3A00BE7B88 /* KeyPadButton9Highlighted.png */; };
+		11B3C68710486E3A00BE7B88 /* KeyPadButton11Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C66F10486E3A00BE7B88 /* KeyPadButton11Normal.png */; };
+		11B3C68A104876B900BE7B88 /* EZTipBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C689104876B900BE7B88 /* EZTipBackGround.png */; };
+		11B3C6E9104887BE00BE7B88 /* AdjustButtonIncreaseHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C6E5104887BE00BE7B88 /* AdjustButtonIncreaseHighlighted.png */; };
+		11B3C6EA104887BE00BE7B88 /* AdjustButtonDecreaseHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C6E6104887BE00BE7B88 /* AdjustButtonDecreaseHighlighted.png */; };
+		11B3C6EB104887BE00BE7B88 /* AdjustButtonDecreaseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C6E7104887BE00BE7B88 /* AdjustButtonDecreaseNormal.png */; };
+		11B3C6EC104887BE00BE7B88 /* AdjustButtonIncreaseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C6E8104887BE00BE7B88 /* AdjustButtonIncreaseNormal.png */; };
+		11B3C6EF10488CBA00BE7B88 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C6EE10488CBA00BE7B88 /* Default.png */; };
+		11B3C7F11048AEAC00BE7B88 /* homeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B3C7F01048AEAC00BE7B88 /* homeIcon.png */; };
+		11EF10DC10210C0200D6EB61 /* EZTipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EF10DB10210C0200D6EB61 /* EZTipViewController.m */; };
+		11EF10F910210C7500D6EB61 /* EZTipQuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EF10F810210C7500D6EB61 /* EZTipQuartzView.m */; };
+		1D3623260D0F684500981E51 /* EZTipAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* EZTipAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11B3C65810486E3A00BE7B88 /* KeyPadButton10Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton10Highlighted.png; sourceTree = "<group>"; };
+		11B3C65910486E3A00BE7B88 /* KeyPadButton12Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton12Highlighted.png; sourceTree = "<group>"; };
+		11B3C65A10486E3A00BE7B88 /* KeyPadButton11Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton11Highlighted.png; sourceTree = "<group>"; };
+		11B3C65B10486E3A00BE7B88 /* KeyPadButton6Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton6Highlighted.png; sourceTree = "<group>"; };
+		11B3C65C10486E3A00BE7B88 /* KeyPadButton4Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton4Highlighted.png; sourceTree = "<group>"; };
+		11B3C65D10486E3A00BE7B88 /* KeyPadButton3Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton3Highlighted.png; sourceTree = "<group>"; };
+		11B3C65E10486E3A00BE7B88 /* KeyPadButton4Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton4Normal.png; sourceTree = "<group>"; };
+		11B3C65F10486E3A00BE7B88 /* KeyPadButton1Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton1Highlighted.png; sourceTree = "<group>"; };
+		11B3C66010486E3A00BE7B88 /* KeyPadButton8Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton8Highlighted.png; sourceTree = "<group>"; };
+		11B3C66110486E3A00BE7B88 /* KeyPadButton5Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton5Highlighted.png; sourceTree = "<group>"; };
+		11B3C66210486E3A00BE7B88 /* KeyPadButton2Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton2Highlighted.png; sourceTree = "<group>"; };
+		11B3C66310486E3A00BE7B88 /* KeyPadButton7Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton7Highlighted.png; sourceTree = "<group>"; };
+		11B3C66410486E3A00BE7B88 /* KeyPadButton6Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton6Normal.png; sourceTree = "<group>"; };
+		11B3C66510486E3A00BE7B88 /* KeyPadButton7Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton7Normal.png; sourceTree = "<group>"; };
+		11B3C66610486E3A00BE7B88 /* KeyPadButton3Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton3Normal.png; sourceTree = "<group>"; };
+		11B3C66710486E3A00BE7B88 /* KeyPadButton5Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton5Normal.png; sourceTree = "<group>"; };
+		11B3C66810486E3A00BE7B88 /* KeyPadButton12Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton12Normal.png; sourceTree = "<group>"; };
+		11B3C66910486E3A00BE7B88 /* KeyPadButton1Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton1Normal.png; sourceTree = "<group>"; };
+		11B3C66A10486E3A00BE7B88 /* KeyPadButton9Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton9Normal.png; sourceTree = "<group>"; };
+		11B3C66B10486E3A00BE7B88 /* KeyPadButton10Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton10Normal.png; sourceTree = "<group>"; };
+		11B3C66C10486E3A00BE7B88 /* KeyPadButton2Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton2Normal.png; sourceTree = "<group>"; };
+		11B3C66D10486E3A00BE7B88 /* KeyPadButton8Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton8Normal.png; sourceTree = "<group>"; };
+		11B3C66E10486E3A00BE7B88 /* KeyPadButton9Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton9Highlighted.png; sourceTree = "<group>"; };
+		11B3C66F10486E3A00BE7B88 /* KeyPadButton11Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyPadButton11Normal.png; sourceTree = "<group>"; };
+		11B3C689104876B900BE7B88 /* EZTipBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EZTipBackGround.png; sourceTree = "<group>"; };
+		11B3C6E5104887BE00BE7B88 /* AdjustButtonIncreaseHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdjustButtonIncreaseHighlighted.png; sourceTree = "<group>"; };
+		11B3C6E6104887BE00BE7B88 /* AdjustButtonDecreaseHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdjustButtonDecreaseHighlighted.png; sourceTree = "<group>"; };
+		11B3C6E7104887BE00BE7B88 /* AdjustButtonDecreaseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdjustButtonDecreaseNormal.png; sourceTree = "<group>"; };
+		11B3C6E8104887BE00BE7B88 /* AdjustButtonIncreaseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdjustButtonIncreaseNormal.png; sourceTree = "<group>"; };
+		11B3C6EE10488CBA00BE7B88 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		11B3C7F01048AEAC00BE7B88 /* homeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeIcon.png; sourceTree = "<group>"; };
+		11EF10D710210BDB00D6EB61 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		11EF10DA10210C0200D6EB61 /* EZTipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTipViewController.h; sourceTree = "<group>"; };
+		11EF10DB10210C0200D6EB61 /* EZTipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTipViewController.m; sourceTree = "<group>"; };
+		11EF10F710210C7500D6EB61 /* EZTipQuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTipQuartzView.h; sourceTree = "<group>"; };
+		11EF10F810210C7500D6EB61 /* EZTipQuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTipQuartzView.m; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* EZTipAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTipAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* EZTipAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTipAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* EZTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* EZTip_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTip_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* EZTip-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EZTip-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* EZTipAppDelegate.h */,
+				1D3623250D0F684500981E51 /* EZTipAppDelegate.m */,
+				11EF10D710210BDB00D6EB61 /* AppConstants.h */,
+				11EF10DA10210C0200D6EB61 /* EZTipViewController.h */,
+				11EF10DB10210C0200D6EB61 /* EZTipViewController.m */,
+				11EF10F710210C7500D6EB61 /* EZTipQuartzView.h */,
+				11EF10F810210C7500D6EB61 /* EZTipQuartzView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		11EF10FE10210C9300D6EB61 /* BackGrounds */ = {
+			isa = PBXGroup;
+			children = (
+				11B3C689104876B900BE7B88 /* EZTipBackGround.png */,
+				11B3C6EE10488CBA00BE7B88 /* Default.png */,
+			);
+			name = BackGrounds;
+			sourceTree = "<group>";
+		};
+		11EF10FF10210CA400D6EB61 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				11B3C6E5104887BE00BE7B88 /* AdjustButtonIncreaseHighlighted.png */,
+				11B3C6E6104887BE00BE7B88 /* AdjustButtonDecreaseHighlighted.png */,
+				11B3C6E7104887BE00BE7B88 /* AdjustButtonDecreaseNormal.png */,
+				11B3C6E8104887BE00BE7B88 /* AdjustButtonIncreaseNormal.png */,
+				11B3C65810486E3A00BE7B88 /* KeyPadButton10Highlighted.png */,
+				11B3C65910486E3A00BE7B88 /* KeyPadButton12Highlighted.png */,
+				11B3C65A10486E3A00BE7B88 /* KeyPadButton11Highlighted.png */,
+				11B3C65B10486E3A00BE7B88 /* KeyPadButton6Highlighted.png */,
+				11B3C65C10486E3A00BE7B88 /* KeyPadButton4Highlighted.png */,
+				11B3C65D10486E3A00BE7B88 /* KeyPadButton3Highlighted.png */,
+				11B3C65E10486E3A00BE7B88 /* KeyPadButton4Normal.png */,
+				11B3C65F10486E3A00BE7B88 /* KeyPadButton1Highlighted.png */,
+				11B3C66010486E3A00BE7B88 /* KeyPadButton8Highlighted.png */,
+				11B3C66110486E3A00BE7B88 /* KeyPadButton5Highlighted.png */,
+				11B3C66210486E3A00BE7B88 /* KeyPadButton2Highlighted.png */,
+				11B3C66310486E3A00BE7B88 /* KeyPadButton7Highlighted.png */,
+				11B3C66410486E3A00BE7B88 /* KeyPadButton6Normal.png */,
+				11B3C66510486E3A00BE7B88 /* KeyPadButton7Normal.png */,
+				11B3C66610486E3A00BE7B88 /* KeyPadButton3Normal.png */,
+				11B3C66710486E3A00BE7B88 /* KeyPadButton5Normal.png */,
+				11B3C66810486E3A00BE7B88 /* KeyPadButton12Normal.png */,
+				11B3C66910486E3A00BE7B88 /* KeyPadButton1Normal.png */,
+				11B3C66A10486E3A00BE7B88 /* KeyPadButton9Normal.png */,
+				11B3C66B10486E3A00BE7B88 /* KeyPadButton10Normal.png */,
+				11B3C66C10486E3A00BE7B88 /* KeyPadButton2Normal.png */,
+				11B3C66D10486E3A00BE7B88 /* KeyPadButton8Normal.png */,
+				11B3C66E10486E3A00BE7B88 /* KeyPadButton9Highlighted.png */,
+				11B3C66F10486E3A00BE7B88 /* KeyPadButton11Normal.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* EZTip.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* EZTip_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11B3C7F01048AEAC00BE7B88 /* homeIcon.png */,
+				11EF10FF10210CA400D6EB61 /* Buttons */,
+				11EF10FE10210C9300D6EB61 /* BackGrounds */,
+				8D1107310486CEB800E47090 /* EZTip-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* EZTip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "EZTip" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZTip;
+			productName = EZTip;
+			productReference = 1D6058910D05DD3D006BFB54 /* EZTip.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "EZTip" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* EZTip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B3C67010486E3A00BE7B88 /* KeyPadButton10Highlighted.png in Resources */,
+				11B3C67110486E3A00BE7B88 /* KeyPadButton12Highlighted.png in Resources */,
+				11B3C67210486E3A00BE7B88 /* KeyPadButton11Highlighted.png in Resources */,
+				11B3C67310486E3A00BE7B88 /* KeyPadButton6Highlighted.png in Resources */,
+				11B3C67410486E3A00BE7B88 /* KeyPadButton4Highlighted.png in Resources */,
+				11B3C67510486E3A00BE7B88 /* KeyPadButton3Highlighted.png in Resources */,
+				11B3C67610486E3A00BE7B88 /* KeyPadButton4Normal.png in Resources */,
+				11B3C67710486E3A00BE7B88 /* KeyPadButton1Highlighted.png in Resources */,
+				11B3C67810486E3A00BE7B88 /* KeyPadButton8Highlighted.png in Resources */,
+				11B3C67910486E3A00BE7B88 /* KeyPadButton5Highlighted.png in Resources */,
+				11B3C67A10486E3A00BE7B88 /* KeyPadButton2Highlighted.png in Resources */,
+				11B3C67B10486E3A00BE7B88 /* KeyPadButton7Highlighted.png in Resources */,
+				11B3C67C10486E3A00BE7B88 /* KeyPadButton6Normal.png in Resources */,
+				11B3C67D10486E3A00BE7B88 /* KeyPadButton7Normal.png in Resources */,
+				11B3C67E10486E3A00BE7B88 /* KeyPadButton3Normal.png in Resources */,
+				11B3C67F10486E3A00BE7B88 /* KeyPadButton5Normal.png in Resources */,
+				11B3C68010486E3A00BE7B88 /* KeyPadButton12Normal.png in Resources */,
+				11B3C68110486E3A00BE7B88 /* KeyPadButton1Normal.png in Resources */,
+				11B3C68210486E3A00BE7B88 /* KeyPadButton9Normal.png in Resources */,
+				11B3C68310486E3A00BE7B88 /* KeyPadButton10Normal.png in Resources */,
+				11B3C68410486E3A00BE7B88 /* KeyPadButton2Normal.png in Resources */,
+				11B3C68510486E3A00BE7B88 /* KeyPadButton8Normal.png in Resources */,
+				11B3C68610486E3A00BE7B88 /* KeyPadButton9Highlighted.png in Resources */,
+				11B3C68710486E3A00BE7B88 /* KeyPadButton11Normal.png in Resources */,
+				11B3C68A104876B900BE7B88 /* EZTipBackGround.png in Resources */,
+				11B3C6E9104887BE00BE7B88 /* AdjustButtonIncreaseHighlighted.png in Resources */,
+				11B3C6EA104887BE00BE7B88 /* AdjustButtonDecreaseHighlighted.png in Resources */,
+				11B3C6EB104887BE00BE7B88 /* AdjustButtonDecreaseNormal.png in Resources */,
+				11B3C6EC104887BE00BE7B88 /* AdjustButtonIncreaseNormal.png in Resources */,
+				11B3C6EF10488CBA00BE7B88 /* Default.png in Resources */,
+				11B3C7F11048AEAC00BE7B88 /* homeIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* EZTipAppDelegate.m in Sources */,
+				11EF10DC10210C0200D6EB61 /* EZTipViewController.m in Sources */,
+				11EF10F910210C7500D6EB61 /* EZTipQuartzView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		11EF10C41021088C00D6EB61 /* AppStoreRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Indriam Inc.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1AC4823A-CEB8-41A2-A36C-617386B9629A";
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = AppStoreRelease;
+		};
+		11EF10C51021088C00D6EB61 /* AppStoreRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EZTip_Prefix.pch;
+				INFOPLIST_FILE = "EZTip-Info.plist";
+				PRODUCT_NAME = EZTip;
+			};
+			name = AppStoreRelease;
+		};
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EZTip_Prefix.pch;
+				INFOPLIST_FILE = "EZTip-Info.plist";
+				PRODUCT_NAME = EZTip;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EZTip_Prefix.pch;
+				INFOPLIST_FILE = "EZTip-Info.plist";
+				PRODUCT_NAME = EZTip;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bijit Halder";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "11EFF217-ABE5-4F9E-90EA-317C6EB297C2";
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "EZTip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				11EF10C51021088C00D6EB61 /* AppStoreRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "EZTip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				11EF10C41021088C00D6EB61 /* AppStoreRelease */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
